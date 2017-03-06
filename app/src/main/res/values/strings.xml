@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GameOfThrones</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="battle_strength">Battle Strength : %1$s</string>
+    <string name="battle_strength_2">Battle Strength</string>
+    <string name="battle_type_strength">Strength in \nBattle Type</string>
+    <string name="highest_rating">Highest Rating : %1$d</string>
+    <string name="data_not_available_from_server">Not able to reach the server</string>
+    <string name="data_not_available">Data not available</string>
+    <string name="battles_won">Battles Won</string>
+    <string name="battles_lost">Battles Lost</string>
+    <string name="search">Search</string>
+</resources>

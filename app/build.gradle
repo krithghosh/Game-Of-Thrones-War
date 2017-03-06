@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.got.krith.gameofthrones"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:24.2.1'
+    }
+}
+
+ext {
+    butterknifeVersion = '8.4.0'
+    daggerVersion = '2.5'
+    espressoVersion = '2.2.2'
+    gsonVersion = '2.6.1'
+    junitVersion = '4.12'
+    okHttp3Version = '3.2.0'
+    okHttpInterceptorVersion = '3.2.0'
+    okioVersion = '1.7.0'
+    mockitoVersion = '2.7.5'
+    rxAndroidVersion = '1.2.0'
+    rxJavaVersion = '1.1.5'
+    retrofitVersion = '2.0.2'
+    sqlbriteVersion = '0.7.0'
+    supportAnnotationsVersion = '24.2.1'
+    supportLibraryVersion = '25.1.0'
+    supportTestVersion = '0.5'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Dagger 2 dependencies
+    compile "com.google.dagger:dagger:$daggerVersion"
+    apt "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // View Injections
+    compile "com.jakewharton:butterknife:$butterknifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+    // Support Library
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support:design:$supportLibraryVersion"
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+
+    // REST Interactions
+    compile "com.squareup.okhttp3:okhttp:$okHttp3Version"
+    compile "com.squareup.okio:okio:$okioVersion"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okHttpInterceptorVersion"
+
+    // JSON Parsing
+    compile "com.google.code.gson:gson:$gsonVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // RxJava
+    compile "io.reactivex:rxandroid:$rxAndroidVersion"
+    compile "io.reactivex:rxjava:$rxJavaVersion"
+
+    // Retrofit RxJava
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+
+    // App's dependencies including Test
+    androidTestCompile("com.android.support:support-annotations:$supportAnnotationsVersion") {
+        exclude group: 'com.android.support'
+    }
+
+    // Testing only dependencies
+    testCompile "junit:junit:$junitVersion"
+    testCompile "org.mockito:mockito-core:$mockitoVersion"
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile("com.android.support.test:runner:$supportTestVersion") {
+        exclude group: 'com.android.support'
+    }
+    androidTestCompile("com.android.support.test:rules:$supportTestVersion") {
+        exclude group: 'com.android.support'
+    }
+
+    // Sqlbrite for storing in local db
+    compile "com.squareup.sqlbrite:sqlbrite:$sqlbriteVersion"
+
+
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:support-v4:25.1.0'
+}

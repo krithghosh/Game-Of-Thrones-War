@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.got.krith.gameofthrones.king_details.KingDetails">
+
+    <RelativeLayout
+        android:id="@+id/rl_intro_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/broad_layout_height"
+        android:background="@drawable/background">
+
+        <com.got.krith.gameofthrones.utils.LatoRegularTextView
+            android:id="@+id/tv_initial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/content_gutter"
+            android:background="@drawable/circle"
+            android:paddingLeft="@dimen/padding_less_cg"
+            android:paddingTop="@dimen/content_gutter_quarter"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/text_size_bigger" />
+
+        <com.got.krith.gameofthrones.utils.LatoBoldTextView
+            android:id="@+id/tv_king_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/text_view_margin"
+            android:layout_marginTop="@dimen/text_view_margin"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <com.got.krith.gameofthrones.utils.LatoRegularTextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_king_name"
+            android:layout_below="@+id/tv_king_name"
+            android:layout_marginTop="@dimen/content_gutter_half"
+            android:text="@string/highest_rating"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/rating_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_intro_layout"
+        android:layout_margin="@dimen/content_gutter"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/king_details_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/content_gutter"
+            android:paddingRight="@dimen/content_gutter"
+            android:weightSum="2">
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/battles_won"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:id="@+id/tv_battles_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/king_details_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/content_gutter"
+            android:paddingRight="@dimen/content_gutter"
+            android:weightSum="2">
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/battles_lost"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:id="@+id/tv_battles_lost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/king_details_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/content_gutter"
+            android:paddingRight="@dimen/content_gutter"
+            android:weightSum="2">
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/battle_strength_2"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:id="@+id/tv_strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/king_details_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/content_gutter"
+            android:paddingRight="@dimen/content_gutter"
+            android:weightSum="2">
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/battle_type_strength"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+
+            <com.got.krith.gameofthrones.utils.LatoRegularTextView
+                android:id="@+id/tv_strength_battle_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

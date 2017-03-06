@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="content_gutter_more">20dp</dimen>
+    <dimen name="content_gutter">16dp</dimen>
+    <dimen name="content_gutter_x2">32dp</dimen>
+    <dimen name="padding_less_cg">12dp</dimen>
+    <dimen name="filter_size">48dp</dimen>
+    <dimen name="content_gutter_half">8dp</dimen>
+    <dimen name="content_gutter_quarter">4dp</dimen>
+    <dimen name="pic_size">80dp</dimen>
+    <dimen name="border_x2">2dp</dimen>
+    <dimen name="border">1dp</dimen>
+    <dimen name="border_half">0.5dp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="edit_text_height">44dp</dimen>
+    <dimen name="card_size">100dp</dimen>
+    <dimen name="broad_layout_height">120dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="fab_size">52dp</dimen>
+    <dimen name="text_view_margin">40dp</dimen>
+    <dimen name="rating_text_size">14sp</dimen>
+    <dimen name="name_text_size">16sp</dimen>
+    <dimen name="text_size_bigger">28sp</dimen>
+    <dimen name="text_size_big">24sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="king_details_height">60dp</dimen>
+    <dimen name="contact_row_height">64dp</dimen>
+    <dimen name="text_size_biggest">32sp</dimen>
+    <dimen name="profile_pic_size_row">42dp</dimen>
+</resources>

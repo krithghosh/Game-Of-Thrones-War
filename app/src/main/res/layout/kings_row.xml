@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_size"
+    android:layout_margin="@dimen/content_gutter_half"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <com.got.krith.gameofthrones.utils.LatoRegularTextView
+        android:id="@+id/tv_initial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/content_gutter"
+        android:layout_marginTop="@dimen/padding_less_cg"
+        android:background="@drawable/circle"
+        android:paddingLeft="@dimen/padding_less_cg"
+        android:paddingTop="@dimen/content_gutter_quarter"
+        android:textColor="@color/pink"
+        android:textSize="@dimen/text_size_bigger" />
+
+    <com.got.krith.gameofthrones.utils.LatoRegularTextView
+        android:id="@+id/tv_king_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/content_gutter_half"
+        android:layout_marginStart="@dimen/content_gutter"
+        android:layout_marginTop="@dimen/content_gutter_more"
+        android:gravity="end"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/name_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_half"
+        android:layout_above="@+id/tv_rating"
+        android:layout_marginTop="@dimen/content_gutter_half"
+        android:background="@color/border_color" />
+
+    <com.got.krith.gameofthrones.utils.LatoBoldTextView
+        android:id="@+id/tv_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/content_gutter_half"
+        android:text="@string/highest_rating"
+        android:textSize="@dimen/rating_text_size"
+        android:textStyle="bold" />
+
+    <com.got.krith.gameofthrones.utils.LatoBoldTextView
+        android:id="@+id/tv_battle_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/content_gutter_half"
+        android:gravity="end"
+        android:text="@string/battle_strength"
+        android:textSize="@dimen/rating_text_size"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.got.krith.gameofthrones.all_kings.AllKingsActivity">
+
+    <ImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/filter_size"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/content_gutter"
+        android:padding="@dimen/padding_less_cg"
+        android:src="@drawable/filter"
+        android:visibility="visible" />
+
+    <com.got.krith.gameofthrones.utils.LatoRegularEditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_size"
+        android:layout_marginBottom="@dimen/content_gutter"
+        android:layout_marginStart="@dimen/content_gutter"
+        android:layout_marginTop="@dimen/content_gutter"
+        android:layout_toStartOf="@+id/iv_filter"
+        android:background="@drawable/background"
+        android:drawablePadding="@dimen/content_gutter_half"
+        android:drawableStart="@drawable/search"
+        android:hint="@string/search"
+        android:paddingStart="@dimen/content_gutter_half"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/border_color"
+        android:textSize="@dimen/text_size_medium"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_half"
+        android:layout_above="@+id/rv_all_kings"
+        android:background="@color/border_color" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_all_kings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_footer"
+        android:layout_below="@+id/et_search"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_half"
+        android:layout_above="@+id/rl_footer"
+        android:background="@color/border_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_size"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/content_gutter_half"
+        android:paddingRight="@dimen/content_gutter_half"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/right" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/left" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>
